@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Student Skill Portfolio Hub</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="min-h-screen bg-gray-100 p-6">
+  <!-- Heading -->
+  <h1 class="text-3xl font-bold text-center mb-6">🎓 Student Skill Portfolio Hub</h1>
+
+  <!-- Search & Filter -->
+  <div class="flex flex-col md:flex-row gap-4 justify-center mb-8">
+    <input id="searchInput" type="text" placeholder="Search projects, skills, certificates..."
+           class="w-full md:w-1/3 p-2 border rounded-md"/>
+    <select id="filterSelect" class="p-2 rounded-md border">
+      <option>All</option>
+      <option>Project</option>
+      <option>Certificate</option>
+      <option>Skill</option>
+    </select>
+  </div>
+
+  <!-- Add New Item Form -->
+  <div class="bg-white shadow-md rounded-2xl p-4 mb-8 max-w-2xl mx-auto">
+    <h2 class="text-lg font-semibold mb-4">Add New Portfolio Item</h2>
+    <div class="grid gap-3">
+      <input id="titleInput" type="text" placeholder="Title" class="p-2 border rounded-md"/>
+      <select id="typeSelect" class="p-2 rounded-md border">
+        <option>Project</option>
+        <option>Certificate</option>
+        <option>Skill</option>
+      </select>
+      <input id="descriptionInput" type="text" placeholder="Short Description" class="p-2 border rounded-md"/>
+      <input id="detailsInput" type="text" placeholder="More Details" class="p-2 border rounded-md"/>
+      <button id="addBtn" class="bg-blue-600 text-white px-4 py-2 rounded-md">Add Item</button>
+    </div>
+  </div>
+
+  <!-- Cards -->
+  <div id="cardsContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+
+  <!-- No Results -->
+  <p id="noResults" class="text-center text-gray-500 mt-8 hidden">No results found.</p>
+
+  <script src="./app.js"></script>
+</body>
+</html>
